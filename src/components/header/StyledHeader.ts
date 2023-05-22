@@ -7,7 +7,7 @@ const StyledHeader = styled.header`
   grid-template-columns: 2fr 1fr;
 
   & .logo-anjo-de-patas {
-    height: 20vh;
+    height: 10vh;
   }
 `;
 
