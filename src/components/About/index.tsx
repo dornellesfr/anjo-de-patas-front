@@ -1,10 +1,10 @@
-import React from 'react';
-import { Button } from '../../../node_modules/@mui/material/index';
-import StyledSobre from './StyledSobre';
+import { ReactElement} from 'react';
+import StyledAbout from './About';
+import { Button } from '@mui/material';
 
-function Sobre(): ReactElement {
+function About(): ReactElement {
   return (
-    <StyledSobre>
+    <StyledAbout>
       <div className="div-conteudo">
         <div className="texto">
           <h2>Quem somos?</h2>
@@ -32,8 +32,8 @@ function Sobre(): ReactElement {
           <Button variant="contained">Saiba mais</Button>
         </div>
       </div>
-    </StyledSobre>
+    </StyledAbout>
   );
 }
 
-export default Sobre;
+export default About;

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-const StyledHeader = styled.header`
+
+const Header = styled.header`
   background-color: #FF9501;
   height: 20vh;
   display: flex;
@@ -25,4 +26,4 @@ const StyledHeader = styled.header`
     font-weight: bold;
   }
 `;
-export default StyledHeader;
+export default Header;

@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo/logo.png';
-import StyledHeader from './StyledHeader';
+import StyledHeader from './Header';
 
 function Header(): ReactElement {
   return (
