@@ -15,6 +15,17 @@ const StyledCarousel = styled.div`
     cursor: pointer;
     color: #ff9501;
   }
+  
+  & .right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(50%, -50%);
+    font-size: 50px;
+    right: 5%;
+    z-index: 1;
+    cursor: pointer;
+    color: #ff9501;
+  }
 
   & .left-arrow:hover {
     color: #45a049;
@@ -28,18 +39,6 @@ const StyledCarousel = styled.div`
     transition: ease-out 0.3s;
     font-size: 60px;
   }
-
-  & .right-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translate(50%, -50%);
-    font-size: 50px;
-    right: 5%;
-    z-index: 1;
-    cursor: pointer;
-    color: #ff9501;
-  }
-
 
   & .container-carousel {
     height: 100%;
