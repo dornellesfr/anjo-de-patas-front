@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledCarousel = styled.div`
   width: 90vw;
-  height: 60vh;
+  height: 70vh;
   margin: 1.5rem auto auto auto;
 
   & .left-arrow {
@@ -13,16 +13,18 @@ const StyledCarousel = styled.div`
     left: 5%;
     z-index: 1;
     cursor: pointer;
+    color: #ff9501;
   }
 
   & .left-arrow:hover {
-    color: #FFF;
-    transition: ease-out 0.3s;
+    color: #45a049;
+    transition: ease-out 0.4s;
     font-size: 60px;
+    text-shadow: #000 1px 2px 2px;
   }
 
   & .right-arrow:hover {
-    color: #FFF;
+    color: #45a049;
     transition: ease-out 0.3s;
     font-size: 60px;
   }
@@ -35,6 +37,7 @@ const StyledCarousel = styled.div`
     right: 5%;
     z-index: 1;
     cursor: pointer;
+    color: #ff9501;
   }
 
 
@@ -47,7 +50,7 @@ const StyledCarousel = styled.div`
   & .carousel-image {
     width: 100%;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
     background-size: cover;
     background-position: center;
   }
@@ -80,15 +83,16 @@ const StyledCarousel = styled.div`
   & .dot:hover {
     font-size: 20px;
     -webkit-text-stroke: 1px #000;
-    color: white;
+    color: #45a049;
   }
 
   & .dot {
-    margin: 0px 3px;
+    margin: 0px 2px;
     cursor: pointer;
     font-size: 10px;
     transition: ease-in 0.1s;
-    -webkit-text-stroke: 2px #FFF;
+    -webkit-text-stroke: 1px #000;
+    color: #ff9501;
   }
 `;
 
