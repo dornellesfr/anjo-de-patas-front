@@ -1,26 +1,38 @@
 import styled from 'styled-components';
 
 const StyledCarousel = styled.div`
-  width: 80%;
+  width: 90vw;
   height: 60vh;
   margin: 1.5rem auto auto auto;
 
   & .left-arrow {
     position: absolute;
     top: 50%;
-    transform: translate(0, -50%);
+    transform: translate(-50%, -50%);
     font-size: 50px;
-    left: 40px;
+    left: 5%;
     z-index: 1;
     cursor: pointer;
+  }
+
+  & .left-arrow:hover {
+    color: #FFF;
+    transition: ease-out 0.3s;
+    font-size: 60px;
+  }
+
+  & .right-arrow:hover {
+    color: #FFF;
+    transition: ease-out 0.3s;
+    font-size: 60px;
   }
 
   & .right-arrow {
     position: absolute;
     top: 50%;
-    transform: translate(0, -50%);
+    transform: translate(50%, -50%);
     font-size: 50px;
-    right: 40px;
+    right: 5%;
     z-index: 1;
     cursor: pointer;
   }
@@ -28,6 +40,7 @@ const StyledCarousel = styled.div`
 
   & .container-carousel {
     height: 100%;
+    width: 100%;
     position: relative;
   }
 
@@ -39,13 +52,19 @@ const StyledCarousel = styled.div`
     background-position: center;
   }
 
+  & .overflow-carousel {
+    overflow: hidden;
+    height: 100%;
+  }
+
   & .description-slide {
     position: absolute;
     top: 80%;
-    left: 10%;
-    font-size: 1.8rem;
+    left: 3%;
+    font-size: 1.5rem;
     color: white;
     text-shadow: 1px 1px 1px black;
+    margin-right: 3%;
   }
 
   & .dots-container {

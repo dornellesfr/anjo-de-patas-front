@@ -4,7 +4,7 @@ import StyledCarousel from './Carousel';
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
-function Carousel({ slides }: { slides: ICarousel[]}) {
+function Carousel({ slides }: { slides: ICarousel[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const timerRef = useRef(0);
 
@@ -36,6 +36,24 @@ function Carousel({ slides }: { slides: ICarousel[]}) {
     setCurrentIndex(index);
   }
 
+  function getSlideStylesBackground(slideIndex: number): object {
+    return ({
+      backgroundImage: `url(${slides[slideIndex].image})`,
+      width: `100%`
+    });
+  }
+
+  function getSlidesContainerStyles() {
+    const width = 90 * slides.length;
+    return ({
+      display: 'flex',
+      height: '100%',
+      width: `${width}vw`,
+      transition: 'transform ease-out 0.3s',
+      transform: `translateX(${-(currentIndex * 90)}vw)`
+    });
+  }
+
   useEffect(() => {
     if (timerRef.current) {
       clearTimeout(timerRef.current);
@@ -50,9 +68,15 @@ function Carousel({ slides }: { slides: ICarousel[]}) {
   return (
     <StyledCarousel>
       <div className='container-carousel'>
-        <ArrowCircleLeftIcon className='left-arrow' onClick={nextImage} />
-        <ArrowCircleRightIcon className='right-arrow' onClick={beforeImage} />
-        <div className='carousel-image' style={{backgroundImage: `url(${slides[currentIndex].image})`}} />
+        <ArrowCircleLeftIcon className='left-arrow' onClick={beforeImage} />
+        <ArrowCircleRightIcon className='right-arrow' onClick={nextImage} />
+        <div className='overflow-carousel'>
+          <div style={getSlidesContainerStyles()}>
+            { slides.map((_slides, index) => (
+                <div key={index} className='carousel-image' style={getSlideStylesBackground(index)}></div>
+            )) }
+          </div>
+        </div>
         <p className='description-slide'>{slides[currentIndex].description}</p>
         <div className='dots-container'>
           { slides.map((_slide, index) => (
