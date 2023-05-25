@@ -51,12 +51,25 @@ const StyledCarousel = styled.div`
   & .dots-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  & .dot:hover {
+    font-size: 20px;
+    -webkit-text-stroke: 1px #000;
+    color: white;
   }
 
   & .dot {
-    margin: 5px 2px;
+    margin: 0px 3px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 10px;
+    transition: ease-in 0.1s;
+    -webkit-text-stroke: 2px #FFF;
   }
 `;
 
