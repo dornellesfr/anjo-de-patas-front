@@ -5,6 +5,7 @@ import SocialMediaZone from "../../components/SocialMediaZone";
 import Carousel from "../../components/Carousel";
 import slides from "../../helpers/carousel/mockMainlyCarousel";
 import PetCard from "../../components/PetCard/index";
+import Footer from "../../components/Footer";
 
 
 function Home(): ReactElement {
@@ -15,6 +16,7 @@ function Home(): ReactElement {
       <About />
       <SocialMediaZone />
       <PetCard/>
+      <Footer />
     </>
   );
 }
