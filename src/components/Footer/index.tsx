@@ -5,7 +5,6 @@ import risu from '../../assets/logo/risu.png';
 function Footer() {
   return (
     <StyledFooter>
-      <h2>Mais informações</h2>
       <div className='container'>
         <div className='container-risu'>
           <Link to={{ pathname: 'https://risu.com.br'}} target='_blank' className='link'>
@@ -15,14 +14,14 @@ function Footer() {
         <nav className='routes'>
           <ul>
             <li><Link to='/'>Home</Link></li>
-            <li><Link to='/'>Adoção</Link></li>
-            <li><Link to='/'>Notícias</Link></li>
-            <li><Link to='/'>Sobre</Link></li>
-            <li><Link to='/'>Contato</Link></li>
+            <li><Link to='/adopt'>Adoção</Link></li>
+            <li><Link to='/news'>Notícias</Link></li>
+            <li><Link to='/about'>Sobre</Link></li>
+            <li><Link to='/contact'>Contato</Link></li>
           </ul>
         </nav>
-        <div>aa</div>
       </div>
+      <p className='developer'>developed by <Link className='developer' target='_blank' to={{pathname: 'https://instagram.com/dornellesfr'}}>@dornellesfr</Link> & <Link className='developer' target='_blank' to={{pathname: 'https://www.instagram.com/gustavormzn/'}}>@gustavormzn</Link></p>
     </StyledFooter>
   );
 }
