@@ -5,7 +5,10 @@ import StyledCardNews from "./CardNews";
 function CardNews({ news }: { news: INewsMock}): ReactElement {
   return (
     <StyledCardNews bg={news.image}>
-      <div className="background"/>
+      <div className="description">
+        <h2>{news.title}</h2>
+        <p>{news.subtitle}</p>
+      </div>
     </StyledCardNews>
   );
 }
