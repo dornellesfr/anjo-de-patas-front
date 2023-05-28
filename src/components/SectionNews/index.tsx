@@ -1,13 +1,15 @@
-import Carousel from "../Carousel";
-import slides from "../../helpers/carousel/mockMainlyCarousel";
+import { ReactElement } from "react";
 import StyledSectionNews from "./SectionNews";
+import CardNewsHome from "../CardNews";
+import newsMockHome from "../../helpers/news/newsMockHome";
+import INewsMock from "../../@types/INewsMockHome";
 
-
-function SectionNews() {
+function SectionNews(): ReactElement {
   return (
     <StyledSectionNews>
-      <Carousel slides={slides} vw={50} vh={50} />
-      
+      { newsMockHome.map((news: INewsMock) => (
+        <CardNewsHome news={news}/>
+      )) }
     </StyledSectionNews>
   );
 }

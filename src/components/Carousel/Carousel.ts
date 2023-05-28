@@ -9,6 +9,8 @@ const StyledCarousel = styled.div<CarouselProps>`
   width: ${(props) => props.vw }vw;
   height: ${(props) => props.vh }vh;
   margin: 1.5rem auto;
+  display: flex;
+  flex-direction: column;
 
   & .left-arrow {
     position: absolute;

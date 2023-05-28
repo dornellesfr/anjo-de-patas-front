@@ -6,16 +6,18 @@ import Carousel from "../../components/Carousel";
 import slides from "../../helpers/carousel/mockMainlyCarousel";
 import PetCard from "../../components/PetCard/index";
 import Footer from "../../components/Footer";
+import SectionNews from "../../components/SectionNews";
 
 
 function Home(): ReactElement {
   return (
     <>
       <Header />
-      <Carousel slides={slides}/>
+      <Carousel slides={slides} vw={90} vh={70}/>
       <About />
       <SocialMediaZone />
       <PetCard/>
+      <SectionNews />
       <Footer />
     </>
   );
