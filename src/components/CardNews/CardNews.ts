@@ -7,20 +7,22 @@ interface bg {
 }
 
 const StyledCardNews = styled.div<bg>`
-  width: 25%;
-  height: 65%;
-  margin: 0 3rem;
-  position: relative;
-  border-radius: ${borderRadius};
+  font-family: 'Lilita One';
   background-image: url(${({ bg }) => bg});
+  border-radius: ${borderRadius};
   background-size: cover;
+  box-sizing: border-box;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
   cursor: pointer;
+  height: 70%;
+  margin: 0 3rem;
+  position: relative;
   transition: ease-in 0.2s;
+  width: 22%;
 
   &:hover {
     height: 80%;
-    width: 30%;
+    width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,15 +50,15 @@ const StyledCardNews = styled.div<bg>`
   }
 
   & .description p {
-    color: black;
+    color: white;
     font-size: 1rem;
-    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
   }
 
   & .description h2 {
     font-size: 1.8rem;
     color: white;
-    text-shadow: 0px 0px 5px black;
+    text-shadow: 1px 1px 7px black;
   }
 `;
 

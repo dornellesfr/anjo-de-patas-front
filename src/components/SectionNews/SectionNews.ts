@@ -10,6 +10,15 @@ const StyledSectionNews = styled.div`
   align-items: center;
   box-sizing: border-box;
 
+  & a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
 `;
 
 export default StyledSectionNews;
