@@ -1,15 +1,22 @@
 import styled from 'styled-components';
 
-const StyledCarousel = styled.div`
-  width: 90vw;
-  height: 70vh;
-  margin: 1.5rem auto auto auto;
+interface CarouselProps {
+  vh: number;
+  vw: number;
+} 
+
+const StyledCarousel = styled.div<CarouselProps>`
+  width: ${(props) => props.vw }vw;
+  height: ${(props) => props.vh }vh;
+  margin: 1.5rem auto;
+  display: flex;
+  flex-direction: column;
 
   & .left-arrow {
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 50px;
+    font-size: 300%;
     left: 5%;
     z-index: 1;
     cursor: pointer;

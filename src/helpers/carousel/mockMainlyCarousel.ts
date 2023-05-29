@@ -1,11 +1,11 @@
-import { ICarousel } from "./ICarousel";
+import { ICarousel } from "../../@types/ICarousel";
 
 const slides: ICarousel[] = [
   {
     id: 1,
     image: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
     title: 'cat',
-    description: '01',
+    description: '',
   },
   {
     id: 2,

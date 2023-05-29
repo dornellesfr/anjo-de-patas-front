@@ -1,8 +1,9 @@
+import { ReactElement } from 'react';
 import StyledFooter from './Footer';
 import { Link } from 'react-router-dom';
 import risu from '../../assets/logo/risu.png';
 
-function Footer() {
+function Footer(): ReactElement {
   return (
     <StyledFooter>
       <div className='container'>

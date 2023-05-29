@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import type { ICarousel } from '../../helpers/carousel/ICarousel';
+import type { ICarousel } from '../../@types/ICarousel';
 import StyledCarousel from './Carousel';
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
-function Carousel({ slides }: { slides: ICarousel[] }) {
+function Carousel({ slides, vw, vh }: { slides: ICarousel[], vw: number, vh: number }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const timerRef = useRef(0);
 
@@ -44,13 +44,13 @@ function Carousel({ slides }: { slides: ICarousel[] }) {
   }
 
   function getSlidesContainerStyles() {
-    const width = 90 * slides.length;
+    const width = vw * slides.length;
     return ({
       display: 'flex',
       height: '100%',
       width: `${width}vw`,
       transition: 'transform ease-out 0.3s',
-      transform: `translateX(${-(currentIndex * 90)}vw)`
+      transform: `translateX(${-(currentIndex * vw)}vw)`
     });
   }
 
@@ -66,7 +66,7 @@ function Carousel({ slides }: { slides: ICarousel[] }) {
   }, [nextImage]);
 
   return (
-    <StyledCarousel>
+    <StyledCarousel vw={vw} vh={vh}>
       <div className='container-carousel'>
         <ArrowCircleLeftIcon className='left-arrow' onClick={beforeImage} />
         <ArrowCircleRightIcon className='right-arrow' onClick={nextImage} />

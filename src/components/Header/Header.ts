@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
 const Header = styled.header`
+  font-family: 'Lilita One';
   background-color: #FF9501;
   height: 20vh;
   display: flex;
   align-items: center;
+  text-shadow: 0px 0px 1px #000;
   & .logo-anjo-de-patas {
     height: 15vh;
   }
@@ -22,8 +24,7 @@ const Header = styled.header`
   & .ul-header li a{
     text-decoration: none;
     color: white;
-    font-size: 32px;
-    font-weight: bold;
+    font-size: 1.5rem;
   }
 `;
 export default Header;
