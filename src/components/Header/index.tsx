@@ -7,7 +7,7 @@ function Header(): ReactElement {
   return (
       <StyledHeader>
         <div className='div-header-img'>
-          <Link to="/home">
+          <Link to="/">
             <img className='logo-anjo-de-patas' src={logo} alt="logo-anjo-de-patas" />
           </Link>
         </div>
