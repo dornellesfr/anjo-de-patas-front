@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 
-const borderRadius = '8px';
+const borderRadius = '4px';
 
 interface bg {
   bg: string;
+  dimensions: {
+    height: number;
+    width: number;
+  }
 }
 
 const StyledCardNews = styled.div<bg>`
@@ -12,17 +16,18 @@ const StyledCardNews = styled.div<bg>`
   border-radius: ${borderRadius};
   background-size: cover;
   box-sizing: border-box;
+  background-position: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
   cursor: pointer;
-  height: 70%;
-  margin: 0 3rem;
+  margin: 1.5rem;
   position: relative;
   transition: ease-in 0.2s;
-  width: 22%;
+  height: ${(props) => props.dimensions.height}px;
+  width: ${(props) => props.dimensions.width}px;
 
   &:hover {
-    height: 80%;
-    width: 25%;
+    height: ${(props) => props.dimensions.height * 1.30 }px;
+    width: ${(props) => props.dimensions.width * 1.30 }px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,12 +45,12 @@ const StyledCardNews = styled.div<bg>`
     bottom: 0px;
     width: 100%;
     position: absolute;
-    height: 30%;
+    height: 35%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 4px 4px;
     text-align: center;
   }
 
@@ -59,6 +64,16 @@ const StyledCardNews = styled.div<bg>`
     font-size: 1.8rem;
     color: white;
     text-shadow: 1px 1px 7px black;
+  }
+  
+  @media (max-width: 950px) {
+    &:hover {
+      height: ${(props) => props.dimensions.height}px;
+      width: ${(props) => props.dimensions.width}px;
+      display: initial;
+      justify-content: initial;
+      align-items: initial;
+    }
   }
 `;
 

@@ -9,7 +9,7 @@ function SectionNews(): ReactElement {
   return (
     <StyledSectionNews>
       { newsMockHome.map((news: INewsMock) => (
-          <CardNews key={news.id} news={news}/>
+          <CardNews dimensions={{ height: 300, width: 350 }} key={news.id} news={news}/>
       )) }
     </StyledSectionNews>
   );
