@@ -14,7 +14,7 @@ function Header(): ReactElement {
         <ul className='ul-header'>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/">Adotar</Link></li>
-          <li><Link to="/">Notícias</Link></li>
+          <li><Link to="/news">Notícias</Link></li>
           <li><Link to="/">Sobre</Link></li>
           <li><Link to="/">Contato</Link></li>
         </ul>
